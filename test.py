@@ -29,7 +29,7 @@ with onto:
         for e in enum.find_all("xs:enumeration"):
             newEnumerationClass(name=e["value"])
 
-    ################ C#, F# 같은건 #때문에 인스턴스가 안만들어진다!
+    ################ C#, F# 같은건 #때문에 인스턴스가 안만들어진다! 아니 만들어지는데 protege에서 안보인다.
 
     class StructuredText(Thing):
         pass
@@ -51,6 +51,8 @@ with onto:
 
     class hasAbstraction(Weakness >> AbstractionEnumeration):
         pass
+
+    newProperty = types.new_class("hasAbstraction")
 
     # Structure
     class StructureEnumeration(Enumeration):
